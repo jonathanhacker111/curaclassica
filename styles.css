@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E8F0FE;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.cadastro-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+h1 {
+    color: #2C3E50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4A5568;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #00b89f;
+}
+
+.whatsapp-input {
+    display: flex;
+    gap: 10px;
+}
+
+.whatsapp-input select {
+    width: 150px;
+    padding-right: 25px;
+}
+
+.whatsapp-input select:focus {
+    border-color: #4299E1;
+    outline: none;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px 8px;
+    border: 2px solid #E2E8F0;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.toggle-btn.active {
+    background-color: #00b89f;
+    color: white;
+    border-color: #00b89f;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #00b89f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #009688;
+}
+
+.password-requirements {
+    display: block;
+    margin-top: 4px;
+    color: #718096;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: #00b89f;
+}
+
+input[type="password"]:invalid {
+    border-color: #E53E3E;
+}
+
+input[type="password"]:invalid + .password-requirements {
+    color: #E53E3E;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .cadastro-form {
+        padding: 20px;
+    }
+} 
