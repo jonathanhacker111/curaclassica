@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde-principal: #00b89f;
+      --verde-hover: #009e8a;
+      --cinza-bg: #f7f7f7;
+      --cinza-input: #ededed;
+      --cinza-texto: #6b6b6b;
+      --branco: #fff;
+      --sombra: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    body {
+      background: var(--cinza-bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+    }
+    .container-login {
+      background: var(--branco);
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      display: flex;
+      overflow: hidden;
+      max-width: 820px;
+      width: 100%;
+      min-height: 420px;
+    }
+    .login-lado-esquerdo {
+      background: var(--verde-principal);
+      color: var(--branco);
+      width: 38%;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .login-logo {
+      width: 180px;
+      max-width: 90%;
+      margin-bottom: 18px;
+    }
+    .login-lado-esquerdo h1 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+      font-family: 'Inter', Arial, sans-serif;
+      opacity: 0.95;
+    }
+    .login-lado-direito {
+      background: var(--branco);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 32px 24px 32px;
+    }
+    .login-titulo {
+      color: var(--verde-principal);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .login-form {
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .input-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px 12px 12px 38px;
+      border: none;
+      border-radius: 8px;
+      background: var(--cinza-input);
+      font-size: 1rem;
+      color: #222;
+      outline: none;
+    }
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      color: #bdbdbd;
+      font-size: 1.1em;
+    }
+    .btn-entrar {
+      width: 100%;
+      background: var(--verde-principal);
+      color: var(--branco);
+      border: none;
+      border-radius: 24px;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-entrar:hover {
+      background: var(--verde-hover);
+    }
+    .login-links {
+      text-align: center;
+      font-size: 0.98rem;
+      color: var(--cinza-texto);
+      margin-top: 8px;
+    }
+    .login-links a {
+      color: var(--verde-principal);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+    .criar-conta-btn {
+      width: 100%;
+      background: var(--branco);
+      color: var(--verde-principal);
+      border: 2px solid var(--verde-principal);
+      border-radius: 24px;
+      padding: 10px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: background 0.2s, color 0.2s;
+      display: block;
+    }
+    .criar-conta-btn:hover {
+      background: var(--verde-principal);
+      color: var(--branco);
+    }
+    @media (max-width: 800px) {
+      .container-login {
+        flex-direction: column;
+        max-width: 98vw;
+        min-height: unset;
+      }
+      .login-lado-esquerdo {
+        width: 100%;
+        min-width: unset;
+        border-radius: 18px 18px 0 0;
+        padding: 28px 12px;
+      }
+      .login-lado-direito {
+        padding: 28px 12px 18px 12px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container-login">
+    <div class="login-lado-esquerdo">
+      <img src="HOR BRANCO SR.png" alt="Logo" class="login-logo">
+    </div>
+    <div class="login-lado-direito">
+      <div class="login-titulo">Entrar na sua conta</div>
+      <form class="login-form">
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="E-mail" required>
+        </div>
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Senha" required>
+        </div>
+        <button class="btn-entrar" type="submit">ENTRAR</button>
+      </form>
+      <div class="login-links">
+        <a href="#">Esqueci minha senha</a>
+      </div>
+      <button class="criar-conta-btn" onclick="window.location.href='cadastro.html'">Crie a sua conta</button>
+    </div>
+  </div>
+</body>
+</html> 
